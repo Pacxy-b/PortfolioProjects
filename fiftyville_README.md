@@ -38,7 +38,7 @@ By exploring and connecting data across these tables, you can reconstruct the se
 | **`answers.txt`** | A summary of the findings — the thief, the accomplice, and where they escaped to. |
 
 
-## Links to the different sections
+## Links to files
 
 ### 1. [View SQL log](https://github.com/Pacxy-b/PortfolioProjects/blob/main/fiftyville_log.sql)
 ### 2. [Download database](https://github.com/Pacxy-b/PortfolioProjects/blob/main/fiftyville_database.db)
