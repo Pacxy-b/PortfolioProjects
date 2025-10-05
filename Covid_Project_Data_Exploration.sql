@@ -35,7 +35,7 @@ order by Total_recorded desc;
 
 
 
--- Total Death count per Country ordered in desc
+-- Top 10 countries with the highest number of Deaths
 
 Select top 10
 	Location, 
@@ -314,3 +314,4 @@ GO
 
 select *
 from PercentPopulationVaccinated;
+
