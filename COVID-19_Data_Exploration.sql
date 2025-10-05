@@ -134,8 +134,7 @@ Select
 	max(cast(Total_deaths as bigint)) as TotalDeathCount
 From PortfolioProject..CovidDeaths
 where continent is null
-	and location != 'World' 
-	and location != 'International'
+	and location not in ('World', 'International', 'European Union')
 group by location
 order by TotalDeathCount desc;
 
@@ -147,9 +146,7 @@ Select
 	max(cast(total_cases as bigint)) as TotalNumberOfCases
 From PortfolioProject..CovidDeaths
 where continent is null
-	and location != 'World'
-	and location != 'International' 
-	and location != 'European Union'
+	and location not in ('World', 'International', 'European Union')
 group by location
 order by TotalNumberOfCases desc;
 
@@ -163,9 +160,7 @@ Select
 	round(max((total_cases/population))*100, 3) as PercentPopulationInfected
 From PortfolioProject..CovidDeaths
 Where continent is null
-	and location != 'World' 
-	and location != 'International' 
-	and location != 'European Union'
+	and location not in ('World', 'International', 'European Union')
 group by location
 order by 1;
 
@@ -179,9 +174,7 @@ Select
 	round(max((total_deaths/population))*100, 3) as PercentPopulationDied
 From PortfolioProject..CovidDeaths
 Where continent is null
-	and location != 'World'	
-	and location != 'International'
-	and location != 'European Union'
+	and location not in ('World', 'International', 'European Union')
 group by location
 order by 1;
 
@@ -210,8 +203,7 @@ From (
 		max(cast(total_deaths as bigint)) as Total_Deaths
 	From PortfolioProject..CovidDeaths
 	Where continent is null
-		and location != 'World'
-		and location != 'European Union'
+		and location not in ('World', 'European Union')
 	group by location
 	)t;
 
@@ -314,4 +306,5 @@ GO
 
 select *
 from PercentPopulationVaccinated;
+
 
