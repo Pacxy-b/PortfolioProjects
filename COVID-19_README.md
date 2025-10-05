@@ -71,5 +71,5 @@ Data sourced from [Our World in Data](https://ourworldindata.org), licensed unde
 
 ### Author
 **Benedict Onyekpe**  
-Data Enthusiast | Aspiring Data Analyst  
+Data Enthusiast | Data Analyst  
 *Inspired by Alex the Analyst’s SQL Portfolio Project Series*  
