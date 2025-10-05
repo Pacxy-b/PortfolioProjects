@@ -59,7 +59,7 @@ This project is for educational and portfolio purposes only.
 All original materials, including the database and instructions, were provided by [CS50: Introduction to Computer Science](https://cs50.harvard.edu/x/psets/7/fiftyville/), licensed under [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
 
 
-### Author
+## Author
 **Benedict Onyekpe**  
 Data Enthusiast | Aspiring Data Analyst
  [Connect on LinkedIn](https://www.linkedin.com/in/benedict-onyekpe-0a5718217/)
