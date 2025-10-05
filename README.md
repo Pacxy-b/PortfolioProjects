@@ -4,6 +4,11 @@ This project is my personal take on the **COVID-19 Data Exploration** project or
 Using SQL, I analysed global COVID-19 data to gain insights into infection trends, mortality rates, and vaccination progress. The goal was to strengthen my SQL skills while applying them to a real-world dataset.
 
 
+## Project Link
+You can view the full project here:  
+  [**COVID-19 Data Exploration**](https://github.com/Pacxy-b/PortfolioProjects/blob/main/COVID-19_Data_Exploration.sql)  
+
+
 ## Project Overview
 In this project, I used SQL to analyse global COVID-19 statistics and answer key questions such as:
 - Which countries had the highest infection and death rates?
