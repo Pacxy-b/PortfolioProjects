@@ -61,5 +61,5 @@ All original materials, including the database and instructions, were provided b
 
 ## Author
 **Benedict Onyekpe**  
-Data Enthusiast | Aspiring Data Analyst
+Data Enthusiast | Data Analyst
  [Connect on LinkedIn](https://www.linkedin.com/in/benedict-onyekpe-0a5718217/)
