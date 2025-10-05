@@ -21,24 +21,31 @@ Where continent is not null
 order by 1,2;
 
 
--- Total Cases vs Total Deaths
--- Probability of Dying from covid per country per day
 
-Select Location, date, total_cases,total_deaths, (total_deaths/total_cases)*100 as Prob_of_death
-From PortfolioProject..CovidDeaths
-Where continent is not null
--- and  location = 'Nigeria'
-order by 1,2;
+-- Top 10 countries with the highest number of cases
+
+Select top 10
+	Location, 
+	max(total_cases) as Total_recorded
+From PortfolioProject..CovidDeaths 
+Where continent is not null 
+-- and location like 'Nigeria'
+Group by Location
+order by Total_recorded desc;
 
 
--- Total Cases vs Population
--- Shows the percentage of population of each country infected with Covid per day
 
-Select Location, date, Population, total_cases,  (total_cases/population)*100 as PercentPopulationInfectedPerDay
-From PortfolioProject..CovidDeaths
-Where continent is not null
--- and location = 'Nigeria'
-order by 1,2;
+-- Total Death count per Country ordered in desc
+
+Select top 10
+	Location, 
+	max(cast(Total_deaths as bigint)) as TotalDeathCount
+From PortfolioProject..CovidDeaths 
+Where continent is not null 
+-- and location like 'Nigeria'
+Group by Location
+order by TotalDeathCount desc;
+
 
 
 -- max number of cases vs population
@@ -56,16 +63,65 @@ group by location
 order by 1;
 
 
--- Total Death count per Country ordered in desc
 
-Select
+-- Total Cases vs Total Deaths
+-- Probability of Dying from covid per country per day
+
+Select 
+	Location,
+	max(total_cases) as TotalCases, 
+	max(total_deaths) as TotalDeaths, 
+	max((total_deaths/total_cases))*100 as Prob_of_death_in_Percent
+From PortfolioProject..CovidDeaths
+Where continent is not null
+-- and  location = 'Nigeria'
+group by location
+order by 1;
+
+
+
+-- Total Cases vs Population
+-- Shows the percentage of population of each country infected with Covid per day
+
+Select 
 	Location, 
-	max(cast(Total_deaths as bigint)) as TotalDeathCount
-From PortfolioProject..CovidDeaths 
-Where continent is not null 
--- and location like 'Nigeria'
-Group by Location
-order by TotalDeathCount desc;
+	date, 
+	Population, 
+	total_cases,  (total_cases/population)*100 as PercentPopulationInfectedPerDay
+From PortfolioProject..CovidDeaths
+Where continent is not null
+-- and location = 'Nigeria'
+order by 1,2;
+
+
+
+-- Percentage of the population per country that got DInfected with COVID-19 
+
+Select 
+	Location,
+	max(total_cases) as TotalCases, 
+	max(Population) as TotalPopulation, 
+	max((total_cases/Population))*100 as PercentageInfected
+From PortfolioProject..CovidDeaths
+Where continent is not null
+-- and  location = 'Nigeria'
+group by location
+order by 4 desc;
+
+
+
+-- Percentage of the population per country that got Died from COVID-19 
+
+Select 
+	Location,
+	max(cast(total_deaths as bigint)) as TotalDeaths, 
+	max(Population) as TotalPopulation, 
+	max((cast(total_deaths as bigint)/Population))*100 as PercentageDied
+From PortfolioProject..CovidDeaths
+Where continent is not null
+-- and  location = 'Nigeria'
+group by location
+order by 4 desc;
 
 
 
@@ -234,6 +290,7 @@ where dea.continent is not null
 
 select *, (RollingPeopleVaccinated/Population)*100
 from #PercentPopulationVaccinated;
+GO
 
 
 
@@ -252,7 +309,8 @@ From PortfolioProject..CovidDeaths dea
 Join PortfolioProject..CovidVaccinations vac
 	On dea.location = vac.location
 	and dea.date = vac.date
-where dea.continent is not null 
+where dea.continent is not null;
+GO
 
 select *
-from PercentPopulationVaccinated
+from PercentPopulationVaccinated;
