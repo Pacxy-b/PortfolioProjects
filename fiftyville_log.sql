@@ -131,9 +131,9 @@ WHERE flight_id = (
 
 
 
+-- Queries to find who committed the crime
 
-
--- TRIAL 1
+-- FIRST TRIAL. To brng up suspects.
 SELECT name
 FROM people
 WHERE license_plate IN (
@@ -148,7 +148,7 @@ WHERE license_plate IN (
         -- | Bruce  |
         -- +--------+
 
--- TRIAL 2
+-- SECOND TRIAL. To catch who committed the crime.
 SELECT name
 FROM people
 WHERE license_plate IN (
