@@ -51,7 +51,7 @@ Throughout this project, I practised and implemented several SQL techniques:
 - Rolling sum of people vaccinated per country
 
 
-## Tools & Technologies
+## Tools
 - **SQL:** Microsoft SQL Server  
 - **Dataset:** [Our World in Data - COVID-19](https://ourworldindata.org/covid-deaths)  
 - **Visualisation (optional):** Tableau  
@@ -65,7 +65,7 @@ Throughout this project, I practised and implemented several SQL techniques:
 
 
 ## License
-This project is for educational and portfolio purposes only.  
+This project is for portfolio purposes only.  
 Data sourced from [Our World in Data](https://ourworldindata.org), licensed under [Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 
