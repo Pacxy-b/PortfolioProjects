@@ -1,5 +1,4 @@
-
-  /*
+/*
 
 Cleaning Data in SQL Queries
 
@@ -237,5 +236,6 @@ COMMIT;
 
 
 -- View cleaned data
+
 
 select * from PortfolioProject.dbo.NashvilleHousing;
